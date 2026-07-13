@@ -9,64 +9,66 @@
         body {
             background-color: #800000;
             margin: 0;
-            padding: 40px 20px;
+            padding: 60px 40px;
             font-family: sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
+            overflow-x: hidden; /* Prevents side scrolling if names push far */
         }
 
-        /* Paper collage clipping effect */
+        /* REMOVED WHITE MARGIN: 
+           The white background and padding are gone. 
+           Only the raw photos remain floating on maroon.
+        */
         .clipping {
-            background-color: #ffffff;
-            padding: 10px;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
             display: inline-block;
             transition: transform 0.2s ease;
         }
         
-        /* Interactive items slightly lift up when hovered */
+        /* Interactive items still slightly lift up when hovered */
         a.clipping:hover {
-            transform: scale(1.05) rotate(1deg);
+            transform: scale(1.05);
         }
 
-        /* Top Header Section (Name 2 - Portrait - Name 1) */
+        /* Top Header Section (Names pushed to the far corners) */
         .header-row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between; /* Pushes names to the absolute edges */
             width: 100%;
-            max-width: 900px;
-            margin-bottom: 80px;
+            max-width: 1400px; /* Wider container to allow corners behavior */
+            margin-bottom: 100px;
         }
 
+        /* Portrait size remains good */
         .portrait-box img {
             max-width: 200px;
             height: auto;
             border-radius: 4px;
         }
 
+        /* Names are now DOUBLE size (approx 300px max instead of 150px) */
         .name-box img {
-            max-width: 150px;
+            max-width: 300px;
             height: auto;
         }
 
-        /* Projects Section Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px 80px; 
-            max-width: 800px;
+        /* Titles Section changed to a vertical list (one after another) */
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px; /* Generous spacing between each listed item */
             width: 100%;
-            justify-items: center;
-            margin-bottom: 100px;
+            margin-bottom: 120px;
         }
 
+        /* Titles are now THREE TIMES bigger (approx 540px max instead of 180px) */
         .project-item img {
-            max-width: 180px;
+            max-width: 540px;
             height: auto;
         }
 
@@ -75,8 +77,9 @@
             margin-top: auto; 
         }
 
+        /* Contact is now DOUBLE size (200px max instead of 100px) */
         .contact-footer img {
-            max-width: 100px; 
+            max-width: 200px; 
             height: auto;
         }
     </style>
@@ -97,7 +100,7 @@
         </div>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-list">
         <a href="#" class="clipping project-item">
             <img src="title 1.jpg" alt="Project Title 1">
         </a>
