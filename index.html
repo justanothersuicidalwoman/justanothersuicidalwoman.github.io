@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Zahra Mohseni</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Base styling for the maroon background */
+        body {
+            background-color: #800000;
+            margin: 0;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Paper collage clipping effect */
+        .clipping {
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        
+        /* Interactive items slightly lift up when hovered */
+        a.clipping:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        /* Top Header Section (Name 2 - Portrait - Name 1) */
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 80px; /* Distance between header and project titles */
+        }
+
+        .portrait-box img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .name-box img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Projects Section Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 80px; /* Generous spacing between titles */
+            max-width: 800px;
+            width: 100%;
+            justify-items: center;
+            margin-bottom: 100px;
+        }
+
+        .project-item img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        /* Bottom Contact Section */
+        .contact-footer {
+            margin-top: auto; /* Pushes contact to the very bottom */
+        }
+
+        .contact-footer img {
+            max-width: 100px; /* Smaller contact size */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>projrcts and ambitions</h1>
-    <p>Zahra Mohseni is a writer and performance artist. she is not a web desiner but she is making this, ansking for your patience.</p>
+
+    <!-- Top Header: Portrait in middle, names on sides -->
+    <div class="header-row">
+        <div class="clipping name-box">
+            <img src="name 2.jpeg" alt="Name Left">
+        </div>
+        
+        <div class="clipping portrait-box">
+            <img src="portrait.jpeg" alt="My Portrait">
+        </div>
+        
+        <div class="clipping name-box">
+            <img src="name 1.jpeg" alt="Name Right">
+        </div>
+    </div>
+
+    <!-- Middle: 4 Project Titles with reasonable distance -->
+    <div class="projects-grid">
+        <a href="#" class="clipping project-item">
+            <img src="title 1.jpeg" alt="Project Title 1">
+        </a>
+        <a href="#" class="clipping project-item">
+            <img src="title 2.jpeg" alt="Project Title 2">
+        </a>
+        <a href="#" class="clipping project-item">
+            <img src="title 3.jpeg" alt="Project Title 3">
+        </a>
+        <a href="#" class="clipping project-item">
+            <img src="title 4.jpeg" alt="Project Title 4">
+        </a>
+    </div>
+
+    <!-- Bottom: Smaller Contact -->
+    <div class="contact-footer">
+        <a href="#" class="clipping">
+            <img src="contact.jpeg" alt="Contact Info">
+        </a>
+    </div>
+
 </body>
 </html>
