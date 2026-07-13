@@ -82,6 +82,36 @@
             max-width: 200px; 
             height: auto;
         }
+        /* MOBILE PREPARATION: This triggers only on screens smaller than 768px wide */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px; /* Less padding on the edges of the phone */
+            }
+
+            /* Stack Name-Portrait-Name vertically instead of side-by-side */
+            .header-row {
+                flex-direction: column;
+                gap: 20px;
+                margin-bottom: 50px;
+            }
+
+            /* Make the names slightly smaller so they fit nicely on a phone screen */
+            .name-box img {
+                max-width: 200px;
+            }
+
+            /* Automatically scale the big titles down so they never exceed phone width */
+            .project-item img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Make the spaced list slightly tighter for easier scrolling on phones */
+            .projects-list {
+                gap: 50px;
+                margin-bottom: 70px;
+            }
+        }
     </style>
 </head>
 <body>
