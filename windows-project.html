@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Project</title>
+    <style>
+        body {
+            background-color: #800000;
+            color: white;
+            font-family: sans-serif;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevents horizontal scrollbars from scattered/rotated items */
+        }
 
+        .container {
+            max-width: 1100px; /* Wider container to allow room for scattering */
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Generic image formatting */
+        .scatter-art {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, z-index 0.3s ease;
+        }
+
+        /* Brings a photo to the front when hovered */
+        .scatter-art:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            z-index: 50 !important;
+        }
+
+        /* 1. Large Feature Photo on Top */
+        .top-feature {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            display: block;
+        }
+
+        /* 2. Text Paragraph aligned top-left */
+        .intro-text-row {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 80px;
+            padding-left: 5%;
+        }
+
+        .intro-text-p {
+            max-width: 50%;
+            line-height: 1.6;
+        }
+
+        /* 3. The Scattered Collage Canvas */
+        .scatter-canvas {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr); /* 12-column grid for precise offset layout */
+            gap: 20px;
+            row-gap: 80px; /* Pushes clusters down vertically */
+            position: relative;
+            margin-bottom: 120px;
+        }
+
+        /* Individual Scattered Controls (sizes, positioning grids, rotations) */
+        .p1  { grid-column: 1 / 6;  max-width: 320px; transform: rotate(-3deg); }
+        .p2  { grid-column: 6 / 12; max-width: 420px; transform: rotate(2deg); margin-top: -40px; }
+        .p3  { grid-column: 2 / 7;  max-width: 380px; transform: rotate(4deg); }
+        .p4  { grid-column: 8 / 13; max-width: 300px; transform: rotate(-4deg); margin-top: 40px; }
+        .p5  { grid-column: 1 / 5;  max-width: 280px; transform: rotate(-1deg); }
+        .p6  { grid-column: 5 / 10; max-width: 450px; transform: rotate(3deg); margin-left: 20px; }
+        .p7  { grid-column: 9 / 13; max-width: 310px; transform: rotate(-5deg); margin-top: -60px; }
+        .p8  { grid-column: 3 / 8;  max-width: 360px; transform: rotate(1deg); }
+        .p9  { grid-column: 1 / 6;  max-width: 340px; transform: rotate(-2deg); margin-top: 20px; }
+        .p10 { grid-column: 7 / 12; max-width: 400px; transform: rotate(4deg); }
+
+        /* Footer Layout */
+        .footer-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 40px;
+        }
+
+        .portrait-variant {
+            max-width: 120px;
+            border-radius: 4px;
+            transform: rotate(-4deg); /* Small custom twist for this page's joke portrait */
+        }
+
+        .back-link {
+            color: #ffcccc;
+            text-decoration: none;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        /* MOBILE FIX: On small screens, we neatly stack them safely so nothing collapses */
+        @media (max-width: 768px) {
+            .intro-text-p {
+                max-width: 100%;
+            }
+            .intro-text-row {
+                padding-left: 0;
+            }
+            .scatter-canvas {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+            .scatter-art {
+                transform: rotate(0deg) !important; /* Turns off rotation on phones for readability */
+                max-width: 90%;
+                margin: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Windows Project</h1>
+        
+        <img src="win-photo1.jpg" alt="Windows Project Primary Visual" class="scatter-art top-feature">
+        
+        <div class="intro-text-row">
+            <p class="intro-text-p">
+                Write your description for the Windows Project here. By default on desktops, this text stays confined cleanly on the top-left section of the narrative before the visual avalanche begins down below.
+            </p>
+        </div>
+        
+        <div class="scatter-canvas">
+            <img src="win-photo2.jpg"  alt="Visual 2"  class="scatter-art p1">
+            <img src="win-photo3.jpg"  alt="Visual 3"  class="scatter-art p2">
+            <img src="win-photo4.jpg"  alt="Visual 4"  class="scatter-art p3">
+            <img src="win-photo5.jpg"  alt="Visual 5"  class="scatter-art p4">
+            <img src="win-photo6.jpg"  alt="Visual 6"  class="scatter-art p5">
+            <img src="win-photo7.jpg"  alt="Visual 7"  class="scatter-art p6">
+            <img src="win-photo8.jpg"  alt="Visual 8"  class="scatter-art p7">
+            <img src="win-photo9.jpg"  alt="Visual 9"  class="scatter-art p8">
+            <img src="win-photo10.jpg" alt="Visual 10" class="scatter-art p9">
+            <img src="win-photo1.jpg"  alt="Visual 11" class="scatter-art p10">
+        </div>
+
+        <div class="footer-row">
+            <img src="portrait-win.jpg" alt="Windows portrait version" class="scatter-art portrait-variant">
+            
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
