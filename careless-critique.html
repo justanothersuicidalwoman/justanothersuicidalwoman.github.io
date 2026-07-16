@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careless Critique</title>
+    <style>
+        body {
+            background-color: #000080;
+            color: white;
+            font-family: sans-serif;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        /* The 9-Section List styling */
+        .critique-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .critique-item {
+            color: #add8e6; /* Soft light blue */
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.2s ease, color 0.2s ease;
+            display: inline-block;
+        }
+
+        .critique-item:hover {
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Footer Row */
+        .footer-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 30px;
+        }
+
+        .portrait-variant {
+            max-width: 120px;
+            border-radius: 4px;
+        }
+
+        .back-link {
+            color: #add8e6;
+            text-decoration: none;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-row {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 30px;
+            }
+            .critique-item {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Careless Critique</h1>
+        
+        <div class="critique-list">
+            <a href="critique-manifesto.html" class="critique-item"> Manifesto</a>
+            <a href="critique-fran.html" class="critique-item"> Fran: Beginners frascati</a>
+            <a href="critique-war.html" class="critique-item"> War and “pushing up daisies”</a>
+            <a href="critique-roktho.html" class="critique-item"> Roktho</a>
+            <a href="critique-make-it-fit.html" class="critique-item"> Make it fit</a>
+            <a href="critique-spring-2025.html" class="critique-item"> Spring festival 2025</a>
+            <a href="critique-holland-2026.html" class="critique-item"> Holland Festival 2026</a>
+ 
+        </div>
+
+        <div class="footer-row">
+            <img src="portrait-critique.jpg" alt="Critique portrait version" class="portrait-variant">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
