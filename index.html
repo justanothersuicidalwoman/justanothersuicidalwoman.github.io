@@ -42,10 +42,7 @@
             max-width: 1400px; /* Wider container to allow corners behavior */
             margin-bottom: 100px;
         }
-   <div class="header-names-container">
-    <a href="bio-en.html" class="name-link name-left">Zahra Mohseni</a>
-    <a href="bio-fa.html" class="name-link name-right" dir="rtl">زهرا محسنی</a>
-</div>
+
         /* Portrait size remains good */
         .portrait-box img {
             max-width: 200px;
@@ -126,10 +123,60 @@
             width: 100%;
             letter-spacing: 1px;
         }
+
+        /* استایل اختصاصی برای لینک نام‌ها */
+.header-names-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* این اندازه را با عرض کانتینر اصلی‌ات هماهنگ کن */
+    margin: 20px auto 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.name-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.name-link:hover {
+    color: #add8e6; /* تغییر رنگ نرم هنگام نگه داشتن ماوس */
+}
+
+.name-left {
+    text-align: left;
+}
+
+.name-right {
+    text-align: right;
+}
+
+/* هماهنگی با گوشی موبایل */
+@media (max-width: 600px) {
+    .header-names-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .name-left, .name-right {
+        text-align: center;
+    }
+}
+        
     </style>
 </head>
 <body>
 
+       <div class="header-names-container">
+    <a href="bio-en.html" class="name-link name-left">Zahra Mohseni</a>
+    <a href="bio-fa.html" class="name-link name-right" dir="rtl">زهرا محسنی</a>
+</div>
+    
     <div class="header-row">
         <div class="clipping name-box">
             <img src="name 2.jpg" alt="Name Left">
